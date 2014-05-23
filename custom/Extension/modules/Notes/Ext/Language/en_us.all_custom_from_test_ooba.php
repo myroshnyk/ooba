@@ -1,0 +1,6 @@
+<?php 
+ // created: 2014-04-30 11:28:22
+$mod_strings['LBL_RLS01_PARTNERSHIPS_ACTIVITIES_NOTES_FROM_RLS01_REALESTATEPARTNERSHIPS_TITLE'] = 'Activities:Real Estate Real Estate Partnerships';
+$mod_strings['LBL_CONTRACTS'] = 'Installed Products';
+
+?>

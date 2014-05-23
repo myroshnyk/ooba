@@ -1,0 +1,244 @@
+<?php
+$module_name = 'rls01_Resources';
+$viewdefs [$module_name] = 
+array (
+  'EditView' => 
+  array (
+    'templateMeta' => 
+    array (
+      'maxColumns' => '2',
+      'useTabs' => false,
+      'widths' => 
+      array (
+        0 => 
+        array (
+          'label' => '10',
+          'field' => '30',
+        ),
+        1 => 
+        array (
+          'label' => '10',
+          'field' => '30',
+        ),
+      ),
+      'includes' => 
+      array (
+        0 => 
+        array (
+          'file' => 'custom/include/rls/jquery/jquery.maskedinput.js',
+        ),
+      ),
+      'tabDefs' => 
+      array (
+        'LBL_CONTACT_INFORMATION' => 
+        array (
+          'newTab' => false,
+          'panelDefault' => 'expanded',
+        ),
+        'LBL_EDITVIEW_PANEL1' => 
+        array (
+          'newTab' => false,
+          'panelDefault' => 'expanded',
+        ),
+      ),
+    ),
+    'panels' => 
+    array (
+      'lbl_contact_information' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            'name' => 'enterprise_id',
+            'label' => 'LBL_ENTERPRISE_ID',
+            'tabindex' => '1',
+          ),
+          1 => 
+          array (
+            'name' => 'picture',
+            'comment' => 'Picture file',
+            'label' => 'LBL_PICTURE_FILE',
+            'tabindex' => '4',
+          ),
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            'name' => 'first_name',
+            'customCode' => '{html_options name="salutation" id="salutation" options=$fields.salutation.options selected=$fields.salutation.value}&nbsp;<input name="first_name"  id="first_name" size="25" maxlength="25" type="text" value="{$fields.first_name.value}">',
+            'tabindex' => '2',
+          ),
+          1 => 
+          array (
+            'name' => 'resource_type',
+            'studio' => 'visible',
+            'label' => 'LBL_RESOURCE_TYPE',
+            'tabindex' => '5',
+          ),
+        ),
+        2 => 
+        array (
+          0 => 
+          array (
+            'name' => 'last_name',
+            'tabindex' => '3',
+          ),
+          1 => 
+          array (
+            'name' => 'resource_status',
+            'studio' => 'visible',
+            'label' => 'LBL_RESOURCE_STATUS',
+          ),
+        ),
+        3 => 
+        array (
+          0 => 
+          array (
+            'name' => 'department',
+            'tabindex' => '6',
+          ),
+          1 => 
+          array (
+            'name' => 'phone_work',
+            'tabindex' => '12',
+          ),
+        ),
+        4 => 
+        array (
+          0 => 
+          array (
+            'name' => 'job_code',
+            'label' => 'LBL_JOB_CODE',
+            'tabindex' => '7',
+          ),
+          1 => 
+          array (
+            'name' => 'phone_mobile',
+            'tabindex' => '13',
+          ),
+        ),
+        5 => 
+        array (
+          0 => 
+          array (
+            'name' => 'job_name',
+            'label' => 'LBL_JOB_NAME',
+            'tabindex' => '8',
+          ),
+          1 => 
+          array (
+            'name' => 'phone_other',
+            'tabindex' => '14',
+          ),
+        ),
+        6 => 
+        array (
+          0 => 
+          array (
+            'name' => 'im_type',
+            'studio' => 'visible',
+            'label' => 'LBL_IM_TYPE',
+            'tabindex' => '9',
+          ),
+          1 => 
+          array (
+            'name' => 'phone_fax',
+            'tabindex' => '15',
+          ),
+        ),
+        7 => 
+        array (
+          0 => 
+          array (
+            'name' => 'im_name',
+            'label' => 'LBL_IM_NAME',
+            'tabindex' => '10',
+          ),
+          1 => 
+          array (
+            'name' => 'phone_home',
+            'tabindex' => '16',
+          ),
+        ),
+        8 => 
+        array (
+          0 => 
+          array (
+            'name' => 'email1',
+            'studio' => 
+            array (
+              'editview' => true,
+              'editField' => true,
+              'searchview' => false,
+              'popupsearch' => false,
+            ),
+            'label' => 'LBL_EMAIL_ADDRESS',
+            'tabindex' => '11',
+          ),
+          1 => 
+          array (
+            'name' => 'reports_to',
+            'studio' => 'visible',
+            'label' => 'LBL_REPORTS_TO',
+            'tabindex' => '17',
+          ),
+        ),
+        9 => 
+        array (
+          0 => '',
+          1 => 
+          array (
+            'name' => 'description',
+            'tabindex' => '18',
+          ),
+        ),
+      ),
+      'lbl_editview_panel1' => 
+      array (
+        0 => 
+        array (
+          0 => 'assigned_user_name',
+          1 => 
+          array (
+            'name' => 'date_modified',
+            'comment' => 'Date record last modified',
+            'label' => 'LBL_DATE_MODIFIED',
+          ),
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            'name' => 'date_entered',
+            'comment' => 'Date record created',
+            'label' => 'LBL_DATE_ENTERED',
+          ),
+          1 => 
+          array (
+            'name' => 'employee_number',
+            'label' => 'LBL_EMPLOYEE_NUMBER',
+            'tabindex' => '19',
+          ),
+        ),
+        2 => 
+        array (
+          0 => 
+          array (
+            'name' => 'team_name',
+            'displayParams' => 
+            array (
+              'display' => true,
+            ),
+          ),
+          1 => 
+          array (
+            'name' => 'rls01_resources_users_name',
+          ),
+        ),
+      ),
+    ),
+  ),
+);
+?>

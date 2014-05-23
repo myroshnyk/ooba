@@ -1,0 +1,190 @@
+<?php
+$viewdefs ['Opportunities'] = 
+array (
+  'EditView' => 
+  array (
+    'templateMeta' => 
+    array (
+      'maxColumns' => '2',
+      'widths' => 
+      array (
+        0 => 
+        array (
+          'label' => '10',
+          'field' => '30',
+        ),
+        1 => 
+        array (
+          'label' => '10',
+          'field' => '30',
+        ),
+      ),
+      'javascript' => '{$PROBABILITY_SCRIPT}',
+      'useTabs' => false,
+      'tabDefs' => 
+      array (
+        'LBL_EDITVIEW_PANEL1' => 
+        array (
+          'newTab' => false,
+          'panelDefault' => 'expanded',
+        ),
+        'LBL_PANEL_ASSIGNMENT' => 
+        array (
+          'newTab' => false,
+          'panelDefault' => 'expanded',
+        ),
+      ),
+      'syncDetailEditViews' => true,
+    ),
+    'panels' => 
+    array (
+      'lbl_editview_panel1' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            'name' => 'name',
+          ),
+          1 => 
+          array (
+            'name' => 'ref_number_c',
+            'label' => 'LBL_REF_NUMBER',
+          ),
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            'name' => 'product_c',
+            'studio' => 'visible',
+            'label' => 'LBL_PRODUCT',
+            'customCode' => '<select id="product_c" name="product_c">{$PRODCAT}</select>',
+          ),
+        ),
+        2 => 
+        array (
+          0 => 'lead_source',
+          1 => 
+          array (
+            'name' => 'lead_provider_c',
+            'studio' => 'visible',
+            'label' => 'LBL_LEAD_PROVIDER',
+          ),
+        ),
+        3 => 
+        array (
+          0 => 
+          array (
+            'name' => 'agency_c',
+            'studio' => 'visible',
+            'label' => 'LBL_AGENCY',
+          ),
+          1 => 
+          array (
+            'name' => 'ea_branch_c',
+            'studio' => 'visible',
+            'label' => 'LBL_EA_BRANCH',
+          ),
+        ),
+        4 => 
+        array (
+          0 => 
+          array (
+            'name' => 'account_manager_kam_c',
+            'studio' => 'visible',
+            'label' => 'LBL_ACCOUNT_MANAGER_KAM_C',
+          ),
+        ),
+        5 => 
+        array (
+          0 => 
+          array (
+            'name' => 'communication_representative_c',
+            'studio' => 'visible',
+            'label' => 'LBL_COMMUNICATION_REPRESENTATIVE',
+          ),
+          1 => 
+          array (
+            'name' => 'sales_consultant_c',
+            'studio' => 'visible',
+            'label' => 'LBL_SALES_CONSULTANT',
+          ),
+        ),
+        6 => 
+        array (
+          0 => 
+          array (
+            'name' => 'territory_c',
+            'studio' => 'visible',
+            'label' => 'LBL_TERRITORY',
+          ),
+          1 => 
+          array (
+            'name' => 'communication_prospectprimar_c',
+            'studio' => 'visible',
+            'label' => 'LBL_COMMUNICATION_PROSPECTPRIMAR',
+          ),
+        ),
+        7 => 
+        array (
+          0 => 
+          array (
+            'name' => 'status_c',
+            'studio' => 'visible',
+            'label' => 'LBL_STATUS',
+          ),
+          1 => 'sales_stage',
+        ),
+        8 => 
+        array (
+          0 => 'probability',
+          1 => 
+          array (
+            'name' => 'desired_amount_c',
+            'label' => 'LBL_DESIRED_AMOUNT',
+          ),
+        ),
+      ),
+      'LBL_PANEL_ASSIGNMENT' => 
+      array (
+        0 => 
+        array (
+          0 => 'campaign_name',
+          1 => 'description',
+        ),
+        1 => 
+        array (
+          0 => 'assigned_user_name',
+          1 => 
+          array (
+            'name' => 'team_name',
+          ),
+        ),
+        2 => 
+        array (
+          0 => 
+          array (
+            'name' => 'created_by_name',
+            'label' => 'LBL_CREATED',
+          ),
+          1 => 
+          array (
+            'name' => 'date_entered',
+            'comment' => 'Date record created',
+            'label' => 'LBL_DATE_ENTERED',
+          ),
+        ),
+        3 => 
+        array (
+          0 => 
+          array (
+            'name' => 'enterprise_id',
+            'label' => 'LBL_ENTERPRISE_ID',
+          ),
+        ),
+      ),
+    ),
+  ),
+);
+?>
