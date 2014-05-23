@@ -1,5 +1,4 @@
 <?php
-
 if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 
 /*********************************************************************************
@@ -21,38 +20,45 @@ require_once('modules/Contacts/views/view.detail.php');
 class CustomContactsViewDetail extends ContactsViewDetail {
 
 
-  function display(){
+  function display() {
   //echo '<h1>'.htmlentities($this->view_object_map['msg']).'</h1>';
   echo '<h1>'.htmlentities($_REQUEST['msg']).'</h1>';
-  
-      $address = $this->bean->building_complex_name_c . '</br>Unit ' .
-        $this->bean->unit_number_c . ', Floor ' . 
-        $this->bean->floor_c . '</br>' . 
-        $this->bean->street_number_c . ' ' .
-        $this->bean->street_name_c . '</br>' .
-        $this->bean->primary_address_city . ' ' . 
-        $this->bean->primary_address_state . ' ' .
-        $this->bean->primary_address_postalcode . '</br>' .
-        $this->bean->primary_address_country;
+
+    $address = $this->bean->building_complex_name_c . '</br>' .
+      ($this->bean->unit_number_c ? 'Unit ' : '') .
+      $this->bean->unit_number_c .
+      (($this->bean->unit_number_c && $this->bean->floor_c) ? ', ' : '') .
+      ($this->bean->floor_c ? 'Floor ' : '') .
+      $this->bean->floor_c . '</br>' .
+      $this->bean->street_number_c . ' ' .
+      $this->bean->street_name_c . '</br>' .
+      $this->bean->suburb_post_office_c . '</br>' .      
+      $this->bean->primary_address_city . ' ' . 
+      $this->bean->primary_address_state . ' ' .
+      $this->bean->primary_address_postalcode . '</br>' .
+      $this->bean->primary_address_country;
    
-      $this->ss->assign('PRIMARY_ADDRESS', $address);
+    $this->ss->assign('PRIMARY_ADDRESS', $address);
       
       
-      $address = $this->bean->building_complex_name_2_c . '</br>Unit ' .
-        $this->bean->unit_number_2_c . ', Floor ' . 
-        $this->bean->floor_2_c . '</br>' . 
-        $this->bean->street_number_2_c . ' ' .
-        $this->bean->street_name_2_c . '</br>' .
-        $this->bean->alt_address_city . ' ' . 
-        $this->bean->alt_address_state . ' ' .
-        $this->bean->alt_address_postalcode . '</br>' .
-        $this->bean->alt_address_country;
+    $address = $this->bean->building_complex_name_2_c . '</br>' .
+      ($this->bean->unit_number_2_c ? 'Unit ' : '') .
+      $this->bean->unit_number_2_c .
+      (($this->bean->unit_number_2_c && $this->bean->floor_2_c) ? ', ' : '') .
+      ($this->bean->floor_2_c ? 'Floor ' : '') .
+      $this->bean->floor_2_c . '</br>' .
+      $this->bean->street_number_2_c . ' ' .
+      $this->bean->street_name_2_c . '</br>' .
+      $this->bean->suburb_post_office_2_c . '</br>' . 
+      $this->bean->alt_address_city . ' ' . 
+      $this->bean->alt_address_state . ' ' .
+      $this->bean->alt_address_postalcode . '</br>' .
+      $this->bean->alt_address_country;
    
-      $this->ss->assign('ALTERNATE_ADDRESS', $address);
+    $this->ss->assign('ALTERNATE_ADDRESS', $address);
       
       
-      parent::display();  
-  } 
-  
+    parent::display();  
+  }  
 }
 ?>

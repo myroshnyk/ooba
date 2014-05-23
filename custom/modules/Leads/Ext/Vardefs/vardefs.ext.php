@@ -533,6 +533,18 @@ $dictionary['Lead']['fields']['email_t_prequalification_wp_c']['dependency']='';
 
  
 
+// created: 2014-05-21 21:57:13
+$dictionary["Lead"]["fields"]["leads_documents_1"] = array (
+  'name' => 'leads_documents_1',
+  'type' => 'link',
+  'relationship' => 'leads_documents_1',
+  'source' => 'non-db',
+  'module' => 'Documents',
+  'bean_name' => 'Document',
+  'vname' => 'LBL_LEADS_DOCUMENTS_1_FROM_DOCUMENTS_TITLE',
+);
+
+
  // created: 2014-05-02 00:38:39
 
  

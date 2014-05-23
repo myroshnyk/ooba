@@ -66,14 +66,20 @@ class CustomLeadsViewDetail extends LeadsViewDetail {
      // });
      function send_ooba_api(){
         console.log('START API');
-        $.ajax({
+        /*$.ajax({
         type :"POST",
-        url:"index.php?module=Leads&action=ProductSearchService&record={$this->bean->id}",
+        url:"index.php?module=Leads&action=NoDuplicate&record={$this->bean->id}",
         data:"id={$this->bean->id}",
         success:function(prin){
           console.log('END API');
         }
-        });
+        });*/
+        var html = $.ajax({
+          url:"index.php?module=Leads&action=NoDuplicate&record={$this->bean->id}",
+          async: false
+         }).responseText;
+          console.log(html);
+          console.log('END API');
             }
     </script>
 EOQ;

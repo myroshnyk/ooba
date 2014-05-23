@@ -244,4 +244,5 @@ array (
     ),
   ),
 );
+$viewdefs['Opportunities']['DetailView']['templateMeta']['form']['hideAudit'] = true;// hide button "View Change Log"
 ?>

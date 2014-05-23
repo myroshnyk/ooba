@@ -19,12 +19,21 @@ class CustomContactsViewEdit extends ContactsViewEdit
   function display() {
 
     global $mod_strings;
-         
+              
+    $docFlag_CreditCheckReport = 0;
+    $docFlag_FinEvaluation = 0;
+    $documents = $this->bean->get_linked_beans('documents','Document'); 
+    foreach ($documents as $doc) {
+      if ($doc->template_type == 'CREDIT_CHECK_REPORT')  $docFlag_CreditCheckReport = 1;
+      if ($doc->template_type == 'FINANCIAL_EVALUATION') $docFlag_FinEvaluation = 1;
+    }
+        
+    
     $jsscript = <<<EOQ
     <script>      
                                                                  // Setup requirement / unrequirement fields
       $('#marital_status_c').change (function () {            
-        if ($('#marital_status_c').val() == '3') {               // 'Married in Community of Property'
+        if ($('#marital_status_c').val() == 'MARRIED_IN_COMMUNITY_OF_PROPERTY') {   
           addToValidate ('EditView','spouse_c','varchar',true,'{$mod_strings['LBL_SPOUSE']}');   
           $('#spouse_c_label').html('{$mod_strings['LBL_SPOUSE']}: <span class="required">*</span>'); 
         }
@@ -72,7 +81,7 @@ class CustomContactsViewEdit extends ContactsViewEdit
             "country" : "primary_address_country",
             "city_town" : "primary_address_city",
             "province" : "primary_address_state",
-            "post_postal_code" : "primary_address_postalcode",
+            "street_postal_code" : "primary_address_postalcode",
            
           },
         }, "single", true);                       
@@ -108,7 +117,7 @@ class CustomContactsViewEdit extends ContactsViewEdit
             "country" : "alt_address_country",
             "city_town" : "alt_address_city",
             "province" : "alt_address_state",
-            "post_postal_code" : "alt_address_postalcode",          
+            "street_postal_code" : "alt_address_postalcode",          
           },
         }, "single", true);
       }));
@@ -140,11 +149,21 @@ class CustomContactsViewEdit extends ContactsViewEdit
          }
       });
       
+      
+      
+      if ('{$docFlag_CreditCheckReport}' == '0') 
+        $("#credit_outcome_c").hide(); // css('background-color', '#DCDCDC').attr('readonly', 'true').val('');
+      if ('{$docFlag_FinEvaluation}' == '0') {
+        $("#gross_income_c").css('background-color', '#DCDCDC').attr('readonly', 'true');
+        $("#nett_income_c").css('background-color', '#DCDCDC').attr('readonly', 'true');
+        $("#expenses_c").css('background-color', '#DCDCDC').attr('readonly', 'true');
+      }
+      
+      
                                                                                              // Refresh Alternative address
       $("#LBL_EDITVIEW_PANEL1 input").change (function() { $('#copy_address_c').change(); });
       
-      
-   
+         
       $('#marital_status_c').change();
       $('#sacitizen_c').change();     
       $('#copy_address_c').change();    

@@ -1,5 +1,5 @@
 <?php
-// created: 2014-05-15 02:23:34
+// created: 2014-05-21 16:33:19
 $mod_strings = array (
   'LBL_CONTACT_INFORMATION' => 'Overview',
   'LBL_HOME_PHONE' => 'Home Phone:',
@@ -25,4 +25,31 @@ $mod_strings = array (
   'LBL_FORCE_CREDIT_CHECK_C' => 'Force Credit Check',
   'LBL_CREDIT_OUTCOME_DATE' => 'Credit Outcome Date',
   'LBL_DOCUMENTS_SUBPANEL_TITLE' => 'Documents',
+  'LBL_BUILDING_COMPLEX_NAME2' => 'Building / Complex Name',
+  'LBL_BUILDING_COMPLEX_NAME_2' => 'Building / Complex Name',
+  'LBL_BUILDING_COMPLEX_NAME' => 'Building / Complex Name',
+  'LBL_CITIZENSHIP' => 'Citizenship',
+  'LBL_COPY_ADDRESS' => 'Copy address from Primary',
+  'LBL_ENTERPRISE_ID' => 'enterprise_id',
+  'LBL_EXPENSES' => 'Expenses',
+  'LBL_FLOOR2' => 'Floor #',
+  'LBL_FLOOR_2' => 'Floor #',
+  'LBL_FLOOR' => 'Floor #',
+  'LBL_GROSS_INCOME' => 'Gross Income',
+  'LBL_LENGTH_OF_EMPLOYMENT_M' => 'Length of employment (M)',
+  'LBL_MARITAL_STATUS' => 'Marital Status',
+  'LBL_NETT_INCOME' => 'Nett Income',
+  'LBL_NETT_SURPLUS_INCOME' => 'Nett Surplus Income',
+  'LBL_OCCUPATION_STATUS' => 'Occupation Status',
+  'LBL_SACITIZEN' => 'SA Citizen',
+  'LBL_SPOUSE' => 'Spouse',
+  'LBL_STREET_NAME2' => 'Street Name',
+  'LBL_STREET_NAME' => 'Street Name',
+  'LBL_STREET_NUMBER2' => 'Street Number',
+  'LBL_STREET_NUMBER_2' => 'Street Number',
+  'LBL_STREET_NUMBER' => 'Street Number',
+  'LBL_SUBURB_POST_OFFICE_2' => 'Suburb / post office',
+  'LBL_EDITVIEW_PANEL1' => 'Address Detail - Primary',
+  'LBL_EDITVIEW_PANEL2' => 'Address Detail - Other',
+  'LBL_LAST_CREDIT_CHECK_PERFORMED' => 'Last Credit Check Performed',
 );

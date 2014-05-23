@@ -147,11 +147,15 @@ array (
         array (
           0 => 
           array (
+            'name' => 'sacitizen_c',
+            'label' => 'LBL_SACITIZEN',
+          ),
+          1 => 
+          array (
             'name' => 'occupation_status_c',
             'studio' => 'visible',
             'label' => 'LBL_OCCUPATION_STATUS',
           ),
-          1 => '',
         ),
         6 => 
         array (
@@ -166,6 +170,19 @@ array (
             'name' => 'spouse_c',
             'studio' => 'visible',
             'label' => 'LBL_SPOUSE',
+          ),
+        ),
+        7 => 
+        array (
+          0 => 
+          array (
+            'name' => 'length_of_employment_m_c',
+            'label' => 'LBL_LENGTH_OF_EMPLOYMENT_M',
+          ),
+          1 => 
+          array (
+            'name' => 'length_of_employment_y_c',
+            'label' => 'LBL_LENGTH_OF_EMPLOYMENT_Y',
           ),
         ),
       ),
@@ -372,11 +389,6 @@ array (
           ),
         ),
         3 => 
-        array (
-          0 => '',
-          1 => '',
-        ),
-        4 => 
         array (
           0 => 
           array (

@@ -64,8 +64,8 @@ $subpanel_layout['list_fields'] = array (
   'edit_button' => 
   array (
     'vname' => 'LBL_EDIT_BUTTON',
-    'widget_class' => 'SubPanelEditRoleButton',
-    'role_id' => 'opportunity_role_id',
+    'widget_class' => 'SubPanelEditButton',
+    //'role_id' => 'opportunity_role_id',
     'module' => 'Contacts',
     'width' => '5%',
     'default' => true,

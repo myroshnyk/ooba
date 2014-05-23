@@ -31,6 +31,8 @@ unset($layout_defs['Contacts']['subpanel_setup']['quotes']);
 unset($layout_defs['Contacts']['subpanel_setup']['products']);
 unset($layout_defs['Contacts']['subpanel_setup']['campaigns']);
 unset($layout_defs['Contacts']['subpanel_setup']['contracts']);
+unset($layout_defs['Contacts']['subpanel_setup']['contacts']);
+
 // order subpanel
 $layout_defs['Contacts']['subpanel_setup']['documents']['order'] = 10;
 $layout_defs['Contacts']['subpanel_setup']['opportunities']['order'] = 20;

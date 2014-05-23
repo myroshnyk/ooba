@@ -19,6 +19,7 @@ class CustomOpportunitiesViewDetail extends OpportunitiesViewDetail {
      * @see SugarView::display()
      */
     function display() {
+        unset($this->dv->defs['templateMeta']['form']['buttons'][1]);//hide "Duplicate" button
         echo '<h1>'.htmlentities($_REQUEST['msg']).'</h1>';
         echo '<script src="custom/include/javascript/quickCompose.js"></script>';
         //echo '<script src="custom/include/javascript/EmailUICompose.js"></script>';

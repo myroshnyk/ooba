@@ -60,5 +60,11 @@ $mod_strings['LBL_EA_BRANCH_RLS01_BRANCHES_ID'] = 'EA Branch (related  ID)';
 //THIS FILE IS AUTO GENERATED, DO NOT MODIFY
 $mod_strings['LBL_LEADS_LEADS_1_FROM_LEADS_L_TITLE'] = 'Leads';
 $mod_strings['LBL_LEADS_LEADS_1_FROM_LEADS_R_TITLE'] = 'Leads';
+$mod_strings['LBL_LEADS_DOCUMENTS_1_FROM_DOCUMENTS_TITLE'] = 'Documents';
+
+
+//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
+$mod_strings['LBL_LEADS_LEADS_1_FROM_LEADS_L_TITLE'] = 'Leads';
+$mod_strings['LBL_LEADS_LEADS_1_FROM_LEADS_R_TITLE'] = 'Leads';
 
 ?>
