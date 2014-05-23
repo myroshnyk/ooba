@@ -11,7 +11,7 @@ $soapURL = $GLOBALS['sugar_config']['soap_settings']['product_search_service'];
                           'exceptions'=> 1,
                           'trace'=> 1);
     $soapFunction = "process" ;
-    $soapFunctionParameters = array("Id"=>$this->record,"ModuleName"=>$this->module) ;
+    $soapFunctionParameters = array("Id"=>$_REQUEST['record'],"ModuleName"=>'Leads') ;
     try {
         $soapClient = new WSSoapClient($soapURL, $soapParameters);
         $soapClient->__setUsernameToken($soapLogin, $soapPasword, 'PasswordText');
@@ -26,6 +26,8 @@ $soapURL = $GLOBALS['sugar_config']['soap_settings']['product_search_service'];
     $this->view_object_map['request'] = "REQUEST:\n".$soapClient->__getLastRequest(). "\n";
     $this->view_object_map['result'] = "RESULT:\n" . $soapResult->StatusCode . "\n";
     $this->view_object_map['msg'] = "Duplicate check performed. No Duplicates Found.\n";
+    //print_r($soapResult);
+    //exit();
  //$focus = new Lead();
  //$focus->retrieve($_REQUEST['record']);  
 // if($this->bean->description!='is duplicate'){ 
